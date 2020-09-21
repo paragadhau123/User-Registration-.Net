@@ -69,5 +69,12 @@ namespace UserRegistrationTest
             bool result = this.UserRegistration.EmailValidator("adhauparag@gmail.co.in");
             Assert.True(result);
         }
+
+        [Test]
+        public void GivenProperEmail_WhileRemovingSomePart_ShouldReturnTrue()
+        {
+            bool result = this.UserRegistration.EmailValidator("adhauparag@");
+            Assert.True(result);
+        }
     }
 }
