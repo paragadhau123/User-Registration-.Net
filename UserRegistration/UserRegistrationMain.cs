@@ -11,5 +11,9 @@
         {
             return Regex.Match(firstName, this.NAMEPATTERN).Success;
         }
+        public bool LastNameValidator(string lastName)
+        {
+            return Regex.Match(lastName, this.NAMEPATTERN).Success;
+        }
     }
 }
