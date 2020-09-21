@@ -66,7 +66,7 @@ namespace UserRegistrationTest
         [Test]
         public void GivenProperEmail_ShouldReturnTrue()
         {
-            bool result = this.UserRegistration.EmailValidator(".adhauparag@gmail.co.in");
+            bool result = this.UserRegistration.EmailValidator("adhauparag@gmail.co.in");
             Assert.True(result);
         }
 
@@ -88,6 +88,13 @@ namespace UserRegistrationTest
         public void GivenWrongEmail_StartsWithDot_ShouldReturnFalse()
         {
             bool result = this.UserRegistration.EmailValidator(".adhauparag@gmail.com");
+            Assert.False(result);
+        }
+
+        [Test]
+        public void GivenEmptyEmail_ShouldReturnFalse()
+        {
+            bool result = this.UserRegistration.EmailValidator("");
             Assert.False(result);
         }
     }
