@@ -97,5 +97,12 @@ namespace UserRegistrationTest
             bool result = this.UserRegistration.EmailValidator("");
             Assert.False(result);
         }
+
+        [Test]
+        public void GivenProperMobileNumber_ShouldReturnTrue()
+        {
+            bool result = this.UserRegistration.MobileValidator("91 9604445258");
+            Assert.True(result);
+        }
     }
 }
