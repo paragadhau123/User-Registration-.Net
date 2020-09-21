@@ -104,5 +104,12 @@ namespace UserRegistrationTest
             bool result = this.UserRegistration.MobileValidator("91 9604445258");
             Assert.True(result);
         }
+
+        [Test]
+        public void GivenStringFormat_ShouldReturnFalse()
+        {
+            bool result = this.UserRegistration.MobileValidator("abdc");
+            Assert.False(result);
+        }
     }
 }
