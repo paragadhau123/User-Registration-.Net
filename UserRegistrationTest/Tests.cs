@@ -133,9 +133,16 @@ namespace UserRegistrationTest
         }
 
         [Test]
-        public void GivenOneNumberInPassword_ShouldReturnTrue()
+        public void GivenAtleastoneNumberInPassword_ShouldReturnTrue()
         {
             bool result = this.UserRegistration.PasswordValidator("Adhau54423sad");
+            Assert.True(result);
+        }
+
+        [Test]
+        public void GivenAtleastOneSpecialCharacter_ShouldReturnTrue()
+        {
+            bool result = this.UserRegistration.PasswordValidator("P@arafd12");
             Assert.True(result);
         }
     }
