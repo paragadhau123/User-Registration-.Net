@@ -1,8 +1,8 @@
-using NUnit.Framework;
-using System;
-using UserRegistration;
 namespace UserRegistrationTest
 {
+    using NUnit.Framework;
+    using System;
+    using UserRegistration;
     public class Tests
     {
         [SetUp]
