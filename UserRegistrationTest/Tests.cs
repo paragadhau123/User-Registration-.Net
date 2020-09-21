@@ -47,5 +47,13 @@ namespace UserRegistrationTest
             bool result = this.UserRegistration.LastNameValidator("Adhau");
             Assert.True(result);
         }
+
+
+        [Test]
+        public void GivenLessThanThreeCharacterInLastName_ShouldReturnFalse()
+        {
+            bool result = this.UserRegistration.LastNameValidator("Adhau");
+            Assert.False(result);
+        }
     }
 }
