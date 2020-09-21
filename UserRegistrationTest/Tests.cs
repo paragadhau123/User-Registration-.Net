@@ -33,5 +33,12 @@ namespace UserRegistrationTest
             bool result = this.UserRegistration.FirstNameValidator("Pa324");
             Assert.False(result);
         }
+
+        [Test]
+        public void GivenEmptyName_ShouldReturnFalse()
+        {
+            bool result = this.UserRegistration.FirstNameValidator("");
+            Assert.False(result);
+        }
     }
 }
