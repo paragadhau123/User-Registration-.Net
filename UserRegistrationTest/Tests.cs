@@ -111,5 +111,12 @@ namespace UserRegistrationTest
             bool result = this.UserRegistration.MobileValidator("abdc");
             Assert.False(result);
         }
+
+        [Test]
+        public void GivenLessNumberOfDigit_ShouldReturnFalse()
+        {
+            bool result = this.UserRegistration.MobileValidator("96044");
+            Assert.False(result);
+        }
     }
 }
