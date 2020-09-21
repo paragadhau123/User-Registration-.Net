@@ -140,10 +140,17 @@ namespace UserRegistrationTest
         }
 
         [Test]
-        public void GivenAtleastOneSpecialCharacter_ShouldReturnTrue()
+        public void GivenExactlyOneSpecialCharacter_ShouldReturnTrue()
         {
             bool result = this.UserRegistration.PasswordValidator("P@arafd12");
             Assert.True(result);
+        }
+
+        [Test]
+        public void GivenMoreThanOneSpecialCharacter_ShouldReturnFalse()
+        {
+            bool result = this.UserRegistration.PasswordValidator("P@araf#d12");
+            Assert.False(result);
         }
     }
 }
