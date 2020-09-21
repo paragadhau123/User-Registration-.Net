@@ -66,7 +66,7 @@ namespace UserRegistrationTest
         [Test]
         public void GivenProperEmail_ShouldReturnTrue()
         {
-            bool result = this.UserRegistration.EmailValidator("adhauparag@gmail.co.in");
+            bool result = this.UserRegistration.EmailValidator(".adhauparag@gmail.co.in");
             Assert.True(result);
         }
 
@@ -74,7 +74,14 @@ namespace UserRegistrationTest
         public void GivenProperEmail_WhileRemovingSomePart_ShouldReturnTrue()
         {
             bool result = this.UserRegistration.EmailValidator("adhauparag@");
-            Assert.True(result);
+            Assert.False(result);
+        }
+
+        [Test]
+        public void GivenWrongEmail_ByRemoving_AtTheRateSign_ShouldReturnFalse()
+        {
+            bool result = this.UserRegistration.EmailValidator("adhauparaggmail.com");
+            Assert.False(result);
         }
     }
 }
