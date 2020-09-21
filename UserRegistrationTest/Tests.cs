@@ -121,7 +121,14 @@ namespace UserRegistrationTest
         [Test]
         public void GivenExactEightCharacterInPassword_ShouldReturnTrue()
         {
-            bool result = this.UserRegistration.PasswordValidator("ParagA34");
+            bool result = this.UserRegistration.PasswordValidator("Paragadhau");
+            Assert.True(result);
+        }
+
+        [Test]
+        public void GivenAtLeastOneCapitalLetter_AtTheBegining_ShouldReturnTrue()
+        {
+            bool result = this.UserRegistration.PasswordValidator("Manishadhau");
             Assert.True(result);
         }
     }
