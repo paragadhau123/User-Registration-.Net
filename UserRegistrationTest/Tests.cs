@@ -52,7 +52,7 @@ namespace UserRegistrationTest
         [Test]
         public void GivenLessThanThreeCharacterInLastName_ShouldReturnFalse()
         {
-            bool result = this.UserRegistration.LastNameValidator("Adhau");
+            bool result = this.UserRegistration.LastNameValidator("Ad");
             Assert.False(result);
         }
 
@@ -61,6 +61,13 @@ namespace UserRegistrationTest
         {
             bool result = this.UserRegistration.LastNameValidator("Adh123");
             Assert.False(result);
+        }
+
+        [Test]
+        public void GivenProperEmail_ShouldReturnTrue()
+        {
+            bool result = this.UserRegistration.EmailValidator("adhauparag@gmail.co.in");
+            Assert.True(result);
         }
     }
 }
