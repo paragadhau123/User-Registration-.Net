@@ -55,5 +55,12 @@ namespace UserRegistrationTest
             bool result = this.UserRegistration.LastNameValidator("Adhau");
             Assert.False(result);
         }
+
+        [Test]
+        public void GivenNumbersInLastName_ShouldReturnFalse()
+        {
+            bool result = this.UserRegistration.LastNameValidator("Adh123");
+            Assert.False(result);
+        }
     }
 }
