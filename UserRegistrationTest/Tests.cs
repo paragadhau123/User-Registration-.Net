@@ -1,6 +1,5 @@
 namespace UserRegistrationTest
 {
-    using System;
     using NUnit.Framework;
     using UserRegistration;
 
@@ -117,6 +116,13 @@ namespace UserRegistrationTest
         {
             bool result = this.UserRegistration.MobileValidator("96044");
             Assert.False(result);
+        }
+
+        [Test]
+        public void GivenExactEightCharacterInPassword_ShouldReturnTrue()
+        {
+            bool result = this.UserRegistration.PasswordValidator("ParagA34");
+            Assert.True(result);
         }
     }
 }
