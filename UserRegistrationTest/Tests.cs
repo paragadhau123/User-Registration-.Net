@@ -83,5 +83,12 @@ namespace UserRegistrationTest
             bool result = this.UserRegistration.EmailValidator("adhauparaggmail.com");
             Assert.False(result);
         }
+
+        [Test]
+        public void GivenWrongEmail_StartsWithDot_ShouldReturnFalse()
+        {
+            bool result = this.UserRegistration.EmailValidator(".adhauparag@gmail.com");
+            Assert.False(result);
+        }
     }
 }
