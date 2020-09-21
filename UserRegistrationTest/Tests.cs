@@ -1,5 +1,6 @@
 using NUnit.Framework;
-
+using System;
+using UserRegistration;
 namespace UserRegistrationTest
 {
     public class Tests
@@ -8,11 +9,13 @@ namespace UserRegistrationTest
         public void Setup()
         {
         }
-
+       
         [Test]
-        public void Test1()
+        public void GivenProperFirstName_ShouldReturnTrue()
         {
-            Assert.Pass();
+            UserRegistrationMain userRegistration = new UserRegistrationMain();
+            Boolean result = userRegistration.FirstNameValidator("Parag");
+            Assert.True(result);
         }
     }
 }
