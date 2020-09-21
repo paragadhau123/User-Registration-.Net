@@ -1,15 +1,15 @@
-﻿using System;
-using System.Text.RegularExpressions;
-
-namespace UserRegistration
+﻿namespace UserRegistration
 {
-   public class UserRegistrationMain
-    {
-        private String NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
+    using System;
+    using System.Text.RegularExpressions;
 
-        public Boolean FirstNameValidator(String firstName)
+    public class UserRegistrationMain
+    {
+        public readonly string NAMEPATTERN = "^[A-Z]{1}[a-z]{2,}$";
+
+        public bool FirstNameValidator(string firstName)
         {
-            return Regex.Match(firstName, NAME_PATTERN).Success;
+            return Regex.Match(firstName, this.NAMEPATTERN).Success;
         }
     }
 }
