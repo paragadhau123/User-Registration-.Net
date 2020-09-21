@@ -131,5 +131,12 @@ namespace UserRegistrationTest
             bool result = this.UserRegistration.PasswordValidator("Manishadhau");
             Assert.True(result);
         }
+
+        [Test]
+        public void GivenOneNumberInPassword_ShouldReturnTrue()
+        {
+            bool result = this.UserRegistration.PasswordValidator("Adhau54423sad");
+            Assert.True(result);
+        }
     }
 }
