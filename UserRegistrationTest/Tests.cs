@@ -3,15 +3,24 @@ namespace UserRegistrationTest
     using NUnit.Framework;
     using UserRegistration;
 
+    /// <summary>
+    /// Test Class
+    /// </summary>
     public class Tests
     {
-      public readonly UserRegistrationMain UserRegistration = new UserRegistrationMain();
+        public readonly UserRegistrationMain UserRegistration = new UserRegistrationMain();
 
+        /// <summary>
+        ///  Method SetUp
+        /// </summary>
         [SetUp]
         public void Setup()
         {
         }
 
+        /// <summary>
+        /// Test Method to validate first name
+        /// </summary>
         [Test]
         public void GivenProperFirstName_ShouldReturnTrue()
         {
@@ -19,6 +28,9 @@ namespace UserRegistrationTest
             Assert.True(result);
         }
 
+        /// <summary>
+        /// Test Method to validate first name
+        /// </summary>
         [Test]
         public void GivenLessThanThreeCharacter_ShouldReturnFalse()
         {
@@ -26,6 +38,9 @@ namespace UserRegistrationTest
             Assert.False(result);
         }
 
+        /// <summary>
+        /// Test Method to validate first name
+        /// </summary>
         [Test]
         public void GivenNumbersInFirstName_ShouldReturnFalse()
         {
@@ -33,13 +48,19 @@ namespace UserRegistrationTest
             Assert.False(result);
         }
 
+        /// <summary>
+        /// Test Method to validate first name
+        /// </summary>
         [Test]
         public void GivenEmptyName_ShouldReturnFalse()
         {
-            bool result = this.UserRegistration.FirstNameValidator("");
+            bool result = this.UserRegistration.FirstNameValidator(string.Empty);
             Assert.False(result);
         }
 
+        /// <summary>
+        /// Test Method to validate last name
+        /// </summary>
         [Test]
         public void GivenProperLastName_ShouldReturnTrue()
         {
@@ -47,7 +68,9 @@ namespace UserRegistrationTest
             Assert.True(result);
         }
 
-
+        /// <summary>
+        /// Test Method to validate last name
+        /// </summary>
         [Test]
         public void GivenLessThanThreeCharacterInLastName_ShouldReturnFalse()
         {
@@ -55,6 +78,9 @@ namespace UserRegistrationTest
             Assert.False(result);
         }
 
+        /// <summary>
+        /// Test Method to validate last name
+        /// </summary>
         [Test]
         public void GivenNumbersInLastName_ShouldReturnFalse()
         {
@@ -62,6 +88,9 @@ namespace UserRegistrationTest
             Assert.False(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Email
+        /// </summary>
         [Test]
         public void GivenProperEmail_ShouldReturnTrue()
         {
@@ -69,6 +98,9 @@ namespace UserRegistrationTest
             Assert.True(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Email
+        /// </summary>
         [Test]
         public void GivenProperEmail_WhileRemovingSomePart_ShouldReturnTrue()
         {
@@ -76,6 +108,9 @@ namespace UserRegistrationTest
             Assert.False(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Email
+        /// </summary>
         [Test]
         public void GivenWrongEmail_ByRemoving_AtTheRateSign_ShouldReturnFalse()
         {
@@ -83,6 +118,9 @@ namespace UserRegistrationTest
             Assert.False(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Email
+        /// </summary>
         [Test]
         public void GivenWrongEmail_StartsWithDot_ShouldReturnFalse()
         {
@@ -90,13 +128,19 @@ namespace UserRegistrationTest
             Assert.False(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Email
+        /// </summary>
         [Test]
         public void GivenEmptyEmail_ShouldReturnFalse()
         {
-            bool result = this.UserRegistration.EmailValidator("");
+            bool result = this.UserRegistration.EmailValidator(string.Empty);
             Assert.False(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Phone Number
+        /// </summary>
         [Test]
         public void GivenProperMobileNumber_ShouldReturnTrue()
         {
@@ -104,6 +148,9 @@ namespace UserRegistrationTest
             Assert.True(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Phone Number
+        /// </summary>
         [Test]
         public void GivenStringFormat_ShouldReturnFalse()
         {
@@ -111,6 +158,9 @@ namespace UserRegistrationTest
             Assert.False(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Phone Number
+        /// </summary>
         [Test]
         public void GivenLessNumberOfDigit_ShouldReturnFalse()
         {
@@ -118,6 +168,9 @@ namespace UserRegistrationTest
             Assert.False(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Password
+        /// </summary>
         [Test]
         public void GivenExactEightCharacterInPassword_ShouldReturnTrue()
         {
@@ -125,6 +178,9 @@ namespace UserRegistrationTest
             Assert.True(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Password
+        /// </summary>
         [Test]
         public void GivenAtLeastOneCapitalLetter_AtTheBegining_ShouldReturnTrue()
         {
@@ -132,6 +188,9 @@ namespace UserRegistrationTest
             Assert.True(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Password
+        /// </summary>
         [Test]
         public void GivenAtleastoneNumberInPassword_ShouldReturnTrue()
         {
@@ -139,6 +198,9 @@ namespace UserRegistrationTest
             Assert.True(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Password
+        /// </summary>
         [Test]
         public void GivenExactlyOneSpecialCharacter_ShouldReturnTrue()
         {
@@ -146,6 +208,9 @@ namespace UserRegistrationTest
             Assert.True(result);
         }
 
+        /// <summary>
+        /// Test Method to validate Password
+        /// </summary>
         [Test]
         public void GivenMoreThanOneSpecialCharacter_ShouldReturnFalse()
         {
