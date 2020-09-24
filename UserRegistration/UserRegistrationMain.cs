@@ -1,4 +1,9 @@
-﻿namespace UserRegistration
+﻿//-----------------------------------------------------------------------
+// <copyright file="UserRegistrationMain.cs" company="CompanyName">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace UserRegistration
 {
     using System.Text.RegularExpressions;
 
@@ -7,9 +12,24 @@
     /// </summary>
     public class UserRegistrationMain
     {
+        /// <summary>
+        /// Name regular expression pattern
+        /// </summary>
         public readonly string NAMEPATTERN = "^[A-Z]{1}[a-z]{2,}$";
+
+        /// <summary>
+        /// Email regular expression pattern
+        /// </summary>
         public readonly string EMAILPATTERN = "^[a-zA-Z0-9]+([.][a-zA-Z0-9]+)?@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})?$";
+
+        /// <summary>
+        /// Phone Number regular expression pattern
+        /// </summary>
         public readonly string PHONEPATTERN = "^([0-9]{2}[ ]+)?[0-9]{10}$";
+
+        /// <summary>
+        /// Password regular expression pattern
+        /// </summary>
         public readonly string PASSWORDPATTERN = "^([A-Z]{1,})*([(@#$*)-])*[a-zA-Z0-9]{6,}$";
 
         /// <summary>

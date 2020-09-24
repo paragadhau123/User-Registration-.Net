@@ -1,4 +1,9 @@
-﻿namespace UserRegistration
+﻿//-----------------------------------------------------------------------
+// <copyright file="Program.cs" company="CompanyName">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace UserRegistration
 {
     using System;
 
@@ -8,7 +13,7 @@
     public class Program
     {
         /// <summary>
-        /// Method to validate first name
+        /// Main Method
         /// </summary>
         /// <param name="args">String argument</param>
         public static void Main(string[] args)

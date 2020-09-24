@@ -1,3 +1,8 @@
+//-----------------------------------------------------------------------
+// <copyright file="Tests.cs" company="CompanyName">
+//     Company copyright tag.
+// </copyright>
+//-----------------------------------------------------------------------
 namespace UserRegistrationTest
 {
     using NUnit.Framework;
@@ -8,6 +13,9 @@ namespace UserRegistrationTest
     /// </summary>
     public class Tests
     {
+        /// <summary>
+        /// User Registration(Main class) object
+        /// </summary>
         public readonly UserRegistrationMain UserRegistration = new UserRegistrationMain();
 
         /// <summary>
